@@ -2,7 +2,7 @@ module OSXNotifier
 
 export notify
 
-@osx_only begin
+@static if is_apple()
 	using Homebrew
 
 	if Homebrew.installed("terminal-notifier")
